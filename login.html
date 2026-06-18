@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Help AM Editors Login</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#111;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            background:#222;
+            padding:30px;
+            border-radius:15px;
+            width:300px;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:red;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Help AM Editors</h2>
+
+    <input type="email"
+           id="email"
+           placeholder="Email">
+
+    <input type="password"
+           id="password"
+           placeholder="Password">
+
+    <button onclick="signup()">
+        Signup
+    </button>
+
+    <br><br>
+
+    <button onclick="login()">
+        Login
+    </button>
+
+</div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAWCsrHWAnkxSqAh2FWYdDCV70EdBb57_I",
+    authDomain: "help-am-editors.firebaseapp.com",
+    projectId: "help-am-editors",
+    storageBucket: "help-am-editors.firebasestorage.app",
+    messagingSenderId: "732703701531",
+    appId: "1:732703701531:web:1e038ee9145bc2896e16be"
+};
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+window.signup = function(){
+
+    const email =
+        document.getElementById("email").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+    )
+    .then(() => {
+
+        alert("Signup Successful!");
+
+    })
+    .catch((error) => {
+
+        alert(error.message);
+
+    });
+}
+
+window.login = function(){
+
+    const email =
+        document.getElementById("email").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+    )
+    .then(() => {
+
+        alert("Login Successful!");
+
+        window.location.href = "index.html";
+
+    })
+    .catch((error) => {
+
+        alert(error.message);
+
+    });
+}
+
+</script>
+
+</body>
+</html>

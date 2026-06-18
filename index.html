@@ -1,0 +1,251 @@
+**File: index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help AM Editors</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+}
+header{
+    background:#ff0000;
+    padding:20px;
+    text-align:center;
+}
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#222;
+    padding:10px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+}
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    margin:10px;
+    background:red;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+.section{
+    padding:40px 20px;
+}
+.card{
+    background:#1e1e1e;
+    padding:20px;
+    margin:15px 0;
+    border-radius:10px;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    background:#222;
+}
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    padding:10px 20px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Help AM Editors</h1>
+    <p>Best Alight Motion Editing Resources</p>
+</header>
+
+<nav>
+    <a href="#downloads">Downloads</a>
+    <a href="#premium">Premium</a>
+    <a href="#login">Login</a>
+    <a href="https://wa.me/923215016315">WhatsApp</a>
+</nav>
+
+<section class="hero">
+    <h2>Welcome Editors</h2>
+    <p>Download XML Presets, Projects & Editing Packs</p>
+
+    <a class="btn" href="https://wa.me/923215016315">
+        WhatsApp Support
+    </a>
+
+    <a class="btn" href="https://www.tiktok.com/@zelixff2">
+        TikTok @zelixff2
+    </a>
+</section>
+
+<section class="section" id="downloads">
+    <h2>Free Downloads</h2>
+
+    <div class="card">
+        <h3>XML Preset Pack</h3>
+        <button onclick="downloadFile()">
+            Download
+        </button>
+    </div>
+
+    <div class="card">
+        <h3>Project Files</h3>
+        <button onclick="downloadFile()">
+            Download
+        </button>
+    </div>
+</section>
+
+<section class="section" id="premium">
+    <h2>Upgrade to Premium</h2>
+
+    <div class="card">
+        <h3>Premium Price: Rs. 299</h3>
+
+        <p>
+            Send payment to Easypaisa:
+            <br><br>
+            <b>03215016315</b>
+        </p>
+
+        <p>
+            After payment, send screenshot on WhatsApp.
+        </p>
+
+        <a class="btn"
+           href="https://wa.me/923215016315?text=I%20have%20paid%20for%20Premium">
+           Upgrade Now
+        </a>
+    </div>
+</section>
+
+<section class="section" id="login">
+    <h2>Login / Signup</h2>
+
+    <div class="card">
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password"
+               id="password"
+               placeholder="Password">
+
+        <button onclick="login()">
+            Login
+        </button>
+    </div>
+</section>
+<section class="section">
+    <h2>🔥 Trending XML Presets</h2>
+
+    <div class="card">
+        <h3>Velocity XML</h3>
+        <p>Best smooth velocity presets.</p>
+        <a class="btn" href="xml.html">View</a>
+    </div>
+
+    <div class="card">
+        <h3>Shake XML</h3>
+        <p>High-quality shake effects.</p>
+        <a class="btn" href="xml.html">View</a>
+    </div>
+</section>
+<section class="section">
+    <h2>💎 Premium Benefits</h2>
+
+    <div class="card">
+        <p>✔ Unlimited XML Downloads</p>
+        <p>✔ Premium Project Files</p>
+        <p>✔ Fast Support</p>
+        <p>✔ Daily Updates</p>
+
+        <a class="btn"
+           href="https://wa.me/923215016315?text=I%20want%20Premium">
+           Upgrade Now
+        </a>
+    </div>
+</section>
+<section class="section">
+    <h2>📢 Join Our Community</h2>
+
+    <div class="card">
+        <a class="btn"
+           href="https://wa.me/923215016315">
+           WhatsApp
+        </a>
+
+        <a class="btn"
+           href="https://www.tiktok.com/@zelixff2">
+           TikTok
+        </a>
+    </div>
+</section>
+<section class="section">
+    <h2>🎬 Featured Editors</h2>
+
+    <div class="card">
+        <h3>Zelix FF</h3>
+        <p>Top Alight Motion Editor</p>
+    </div>
+
+    <div class="card">
+        <h3>Become Featured</h3>
+        <p>Contact us on WhatsApp to get featured.</p>
+    </div>
+</section>
+<a href="xml.html">XML</a>
+<a href="projects.html">Projects</a>
+<a href="showcase.html">Showcase</a>
+
+<script>
+function downloadFile(){
+    alert("Connect your download links here.");
+}
+
+function login(){
+    let user = document.getElementById("username").value;
+
+    if(user === ""){
+        alert("Please enter username");
+    }else{
+
+}
+}
+</script>
+
+</body>
+</html>
+```<a class="btn" href="xml.html">
+    XML Presets
+</a>
+<a class="btn" href="projects.html">
+    Project Files
+</a>
+<a class="btn" href="showcase.html">
+    Editor Showcase
+</a>
+<a class="btn" href="tutorials.html">
+    Tutorials
+</a>
+<footer>
+    © 2026 Help AM Editors
+</footer>
